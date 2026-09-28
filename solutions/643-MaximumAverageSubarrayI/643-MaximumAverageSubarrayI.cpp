@@ -1,4 +1,4 @@
-// Last updated: 9/28/2026, 11:20:31 AM
+// Last updated: 9/28/2026, 11:22:36 AM
 class Solution {
 public:
 
@@ -27,7 +27,7 @@ public:
             sum+=nums[j];
             j++;
 
-            if( (sum/static_cast<float>(k)) > maxAvg){
+            if( (sum/num) > maxAvg){
                 maxAvg=sum/num;
             }
         }
