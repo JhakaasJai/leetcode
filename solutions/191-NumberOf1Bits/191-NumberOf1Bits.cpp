@@ -1,13 +1,15 @@
-// Last updated: 9/23/2026, 12:21:38 AM
+// Last updated: 9/30/2026, 2:34:00 AM
 class Solution {
 public:
     int hammingWeight(int n) {
-        
-        int out=0;
-        while(n){
-            out+=n&1;
-            n=n>>1;
-        }
-        return out;
+         
+         int count=0;
+         while(n!=0){
+            if(n&1){
+                count++;
+            }
+            n>>=1;
+         }
+         return count;
     }
 };
