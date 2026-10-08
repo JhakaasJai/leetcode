@@ -1,25 +1,17 @@
-// Last updated: 10/8/2026, 11:06:15 PM
+// Last updated: 10/8/2026, 11:10:07 PM
 class Solution {
 public:
     string removeStars(string s) {
         
-        stack<int> out;
+        string ss;
         for(char c: s){
-            if(c == '*' && !out.empty()){
-                out.pop();
+            if(c == '*' && ss.size() != 0){
+                ss.pop_back();
                 continue;
             }
-            out.push(c);
+            ss.push_back(c);
         }
 
-        string str = "";
-        while (!out.empty()) {
-            str.push_back(out.top()); 
-            out.pop();
-        }
-
-        reverse(str.begin(), str.end());
-
-        return str;
+        return ss;
     }
 };
